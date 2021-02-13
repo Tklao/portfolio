@@ -18,6 +18,7 @@ $ cd portfolio
 
 # Instale as dependências
 $ npm install
+$ npm install express
 
 # Execute a aplicação em modo de desenvolvimento
 $ node serve.js
