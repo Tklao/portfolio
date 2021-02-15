@@ -15,16 +15,22 @@
 </head>
 
 <body>
+    <div id="alert">
+        <h1>como deseja ser chamado(a)?</h1>
+        <input id="inp" type="text" placeholder="Nome">
+        <button id="btn" type="submit">Enviar</button>
+    </div>
+
     <header>
         <div id="square">
             <img src="pics/profile.jpg" alt="profile picture" />
         </div>
 
         <nav>
-            <a href="">Inicio</a>
-            <a href="">Fotos</a>
-            <a href="">Sobre</a>
-            <a href="">Contatos</a>
+            <a href="http://localhost:5000/inicio">Inicio</a>
+            <a href="#pictures">Fotos</a>
+            <a href="http://localhost:5000/sobre">Sobre</a>
+            <a href="#contact">Contatos</a>
         </nav>
     </header>
     <main>
@@ -65,7 +71,7 @@
     <footer>
         <span id="congrat"></span>
     </footer>
-    <script src="/public/js/index.js"></script>
+    <script src="../js/index.js"></script>
 </body>
 
 </html>
