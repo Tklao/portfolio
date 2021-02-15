@@ -1,12 +1,24 @@
-function congratByName() {
-    const $congrat = document.getElementById("congrat");
-    const getName = prompt("Digite seu nome");
+const modalWindow = {
+    $alert: document.getElementById("alert"),
+    $congrat: document.getElementById("congrat"),
+    $inp: document.getElementById("inp"),
 
-    if (getName == "" || getName == null) {
-        return ($congrat.innerHTML = `Muito Obrigado por sua visita!!!🎉`);
-    } else {
-        return ($congrat.innerHTML = `Muito Obrigado por sua visita, ${getName}🎉🎉🎉`);
+    open() {
+        this.$alert.style.display = "block";
+    },
+    close() {
+        if (this.$inp.value == "" || this.$inp.value == null) {
+            this.$congrat.innerHTML = `Muito Obrigado por sua visita!!!🎉`;
+        } else {
+            this.$congrat.innerHTML = `Muito Obrigado por sua visita, ${this.$inp.value}🎉🎉🎉`;
+        }
+        this.$alert.style.display = "none";
+    },
+};
+setTimeout(() => {
+    modalWindow.open();
+}, 3000);
 
-    }
-}
-congratByName();
+document.getElementById("btn").addEventListener("click", () => {
+    modalWindow.close();
+});
